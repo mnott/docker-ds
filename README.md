@@ -12,6 +12,11 @@ Copyright (c) 2019 Matthias Nott (mnott (at) mnsoft.org).
 
 Licensed under WTFPL.
 
+The project is based on
+
+(http://www.science.smith.edu/dftwiki/index.php/Tutorial:_Docker_Anaconda_Python_--_4)
+
+
 # INTRODUCTION
 
             This docker file gives a working environment for
