@@ -1,0 +1,9 @@
+# Mac Crap
+.DS_Store
+
+# Dev Crap we don't want to share
+scratch
+
+# We don't want to share our data...
+notebooks/*
+

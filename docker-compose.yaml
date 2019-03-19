@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  docker-ds:
+    build:
+      context: .
+      dockerfile: $PWD/Dockerfile
+    image: mnott/docker-ds
+    ports:
+      - "8888:8888"
+    volumes:
+      - $PWD/notebooks:/home/ubuntu/notebooks
+    environment:
+      - DISPLAY
