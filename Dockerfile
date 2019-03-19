@@ -42,6 +42,12 @@ RUN mkdir /home/ubuntu/notebooks
 RUN jupyter notebook --generate-config --allow-root
 RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'" >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 
+# Install Tensorflow
+RUN pip install tensorflow
+
+# Install keras
+RUN pip install keras
+
 # Jupyter listens port: 8888
 EXPOSE 8888
 
