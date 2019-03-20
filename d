@@ -10,6 +10,17 @@
 
 ###################################################
 #
+# Configuration
+#
+
+editor=e
+
+#
+###################################################
+
+
+###################################################
+#
 # Some Variables for Colors
 #
 
@@ -49,7 +60,8 @@ compose_up () {
 }
 
 compose_down () {
-  docker-compose down
+  # down would remove the container
+  docker-compose stop
 }
 
 
@@ -229,6 +241,8 @@ show_menus() {
     echo -e "${GRE}[lsd]${STD}   List    Dangling  Images"
     echo -e "${GRE}[rmd]${STD}   Remove  Dangling  Images"
     echo -e "${GRE}[rmi]${STD}   Remove  Image"
+    echo ""
+    echo -e "${GRE}[edit]${STD}  Edit    Dockerfile"
     echo -e "${GRE}[build]${STD} Build   Image"
     echo ""
 
@@ -255,6 +269,7 @@ read_options(){
         lsd)   list_dangling_images;pause;;
         rmd)   remove_dangling_images;pause;;
         rmi)   remove_image;pause;;
+        edit)  $editor Dockerfile;pause;;
         build) build_image;pause;;
         con)   console;pause;;
 

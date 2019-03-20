@@ -8,6 +8,7 @@ services:
     image: mnott/docker-ds
     ports:
       - "8888:8888"
+      - "8889:8889"
     volumes:
       - $PWD/notebooks:/home/ubuntu/notebooks
     environment:
